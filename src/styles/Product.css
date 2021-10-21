@@ -1,0 +1,28 @@
+.productContainer {
+}
+.productWrapper {
+  padding: 50px;
+  display: flex;
+}
+.imageContainer {
+  flex: 1;
+}
+.productImage {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+}
+.infoContainer {
+  flex: 1;
+  padding: 0px 50px;
+}
+.productTitle {
+  font-weight: 200;
+}
+.productDescription p {
+  margin: 20px 0px;
+}
+.productPrice span {
+  font-weight: 100;
+  font-size: 40px;
+}
