@@ -11,6 +11,7 @@ import Login from "./login/Login";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import LoginForm from "./login/LoginForm";
+import SingleProduct from "./pages/singleProduct";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/about" exact component={About} />
           <Route path="/contact" exact component={Contact} />
           <Route path="/Login" exact component={Login} />
+          <Route path="/product/:name" exact component={SingleProduct} />
         </Switch>
         <Footer />
       </Router>
