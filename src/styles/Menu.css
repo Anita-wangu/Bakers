@@ -17,6 +17,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   place-items: center;
+  font-size: 15px;
 }
 
 /* MENU ITEM STYLING */
@@ -47,6 +48,115 @@
 .menuItem h1,
 .menuItem p {
   margin-left: 20px;
+}
+.menuItem h1 {
+  font-size: 28px;
+}
+.menuItem p {
+  font-size: 20px;
+}
+.productSelection {
+  display: flex;
+}
+.cartIcon {
+  flex: 1;
+  padding-top: 38px;
+  padding-left: 10px;
+}
+.favIcon {
+  padding-top: 38px;
+  padding-left: 10px;
+}
+
+.MenuSelectButton {
+  width: 75%;
+  height: 30px;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  margin-left: 20px;
+}
+
+/* SINGLE PRODUCTS PAGE STYLING */
+
+.singleProductContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin-top: 10px;
+}
+
+.productDesc {
+  border: none;
+  padding: 10px;
+  width: 95%;
+  height: auto;
+  text-align: justify;
+  margin-bottom: 30px;
+}
+.singleProductContainer .singleProductCard {
+  height: 100%;
+  flex: 50%;
+}
+.singleProductContainer .singleProductSelect {
+  height: 100%;
+  flex: 50%;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.selectType {
+  width: 70%;
+  justify-content: center;
+}
+.selectSize {
+  width: 70%;
+  justify-content: center;
+}
+
+.descLabel {
+  margin-top: 60px;
+  color: black;
+}
+
+.desciptionArea {
+  margin-top: 20px;
+  height: 50px;
+  width: 70%;
+  border: none;
+  border-bottom: 1px solid grey;
+  color: black;
+}
+/* .desciptionArea::placeholder {
+  font-weight: bold;
+  color: grey;
+  /* font-size: 20px; */
+/* font-family: Arial, Helvetica, sans-serif;
+}  */
+.numberInput {
+  width: 70%;
+  height: 30px;
+  justify-content: center;
+}
+.numberInputDiv {
+  margin-top: 40px;
+}
+.addCartButton {
+  margin-top: 40px;
+  width: 150px;
+  height: 30px;
+  border: none;
+  background-color: #121619;
+  color: whitesmoke;
+  font-size: 17px;
+  cursor: pointer;
+  justify-content: center;
+  text-align: justify;
 }
 
 @media only screen and (max-width: 1300px) {

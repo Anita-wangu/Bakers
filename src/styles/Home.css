@@ -33,7 +33,7 @@
   color: black;
 }
 
-.headerContainer button {
+.headerContainer .homeOrderButton {
   color: black;
   border: none;
   border-radius: 5px;
@@ -47,7 +47,7 @@
   font-size: 20px;
 }
 
-.headerContainer button:hover {
+.headerContainer .homeOrderButton:hover {
   background-color: #07090a;
   cursor: pointer;
   transition: 0.3s ease-in;
@@ -83,13 +83,13 @@
     color: white;
   }
 
-  .headerContainer button {
+  .headerContainer .homeOrderButton {
     background-color: white;
     color: #121619;
     margin-bottom: 30px;
   }
 
-  .headerContainer button:hover {
+  .headerContainer .homeOrderButton:hover {
     background-color: rgb(225, 225, 225);
     color: #121619;
   }

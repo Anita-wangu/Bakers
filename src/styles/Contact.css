@@ -68,7 +68,7 @@ form label {
   color: grey;
 }
 
-form button {
+.contactsButton {
   margin-top: 40px;
   width: 140px;
   height: 40px;
