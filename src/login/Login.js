@@ -3,6 +3,8 @@ import "../styles/Login.css";
 import useForm from "./useForm";
 import validate from "./Validate";
 import { Redirect } from "react-router-dom";
+import axios from "axios";
+
 const Login = ({ submitForm }) => {
   const [state, setState] = useState("login-show");
   const [redirect, setRedirect] = useState(false);
@@ -20,7 +22,24 @@ const Login = ({ submitForm }) => {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    setRedirect(true);
+    axios
+      .post("http://localhost:2000/api/auth/signup", {
+        username: values.username,
+        email: values.email,
+        password: values.password,
+      })
+      .then((res) => {
+        setRedirect(true);
+      })
+      .catch((error) => {
+        const ErrorMessage =
+          (error.response &&
+            error.response.data &&
+            error.response.data.message) ||
+          error.message ||
+          error.toString();
+        console.log(ErrorMessage);
+      });
   };
 
   const form = (
@@ -91,8 +110,9 @@ const Login = ({ submitForm }) => {
               </div>
             </form>
             <form
-              action="#"
-              onSubmit={handleSubmit}
+              onSubmit={(e) => {
+                onSubmit(e);
+              }}
               className="signup"
               noValidate
             >

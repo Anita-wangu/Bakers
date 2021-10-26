@@ -6,21 +6,21 @@ import Menu from "./pages/Menu";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Login from "./login/Login";
-// import Login from "./pages/login";
-// import LoginForm from "./pages/LoginForm";
+import AdminNavbar from "./components/AdminNavbar";
+import AdminHome from "./admin/AdminHome";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import LoginForm from "./login/LoginForm";
 import SingleProduct from "./pages/singleProduct";
 
 function App() {
   return (
     <div className="App">
-      {" "}
       <Router>
-        <Navbar />
         <Switch>
-          <Route path="/" exact component={Home} />
+          <Route path="/" exact component>
+            <Navbar />
+            <Home />
+          </Route>
           <Route path="/menu" exact component={Menu} />
           <Route path="/about" exact component={About} />
           <Route path="/contact" exact component={Contact} />
@@ -29,6 +29,13 @@ function App() {
         </Switch>
         <Footer />
       </Router>
+      {/* <Router>
+        <AdminNavbar />
+        <Switch>
+          <Route path="/" exact component={AdminHome} />
+        </Switch>
+        <Footer />
+      </Router> */}
     </div>
   );
 }
