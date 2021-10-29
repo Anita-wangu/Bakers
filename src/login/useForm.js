@@ -2,13 +2,14 @@ import { useState, useEffect } from "react";
 
 const useForm = (callback, validate) => {
   const [values, setValues] = useState({
-    username: "",
+    name: "",
     email: "",
+    phone: "",
     password: "",
-    password2: "",
   });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [redirect, setRedirect] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,8 +21,14 @@ const useForm = (callback, validate) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     setErrors(validate(values));
+    setIsSubmitting(true);
+  };
+
+  const handleSignupSubmit = (e) => {
+    e.preventDefault();
+    setErrors(validate(values));
+
     setIsSubmitting(true);
   };
 
@@ -31,7 +38,14 @@ const useForm = (callback, validate) => {
     }
   }, [errors]);
 
-  return { handleChange, handleSubmit, values, errors };
+  return {
+    handleChange,
+    handleSubmit,
+    values,
+    errors,
+    redirect,
+    handleSignupSubmit,
+  };
 };
 
 export default useForm;
