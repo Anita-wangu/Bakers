@@ -1,0 +1,76 @@
+.shoppingBox {
+  /* width: 70%; */
+  /* margin-left: auto;
+  margin-right: auto;
+  margin-top: ; */
+  /* margin: auto;
+  border-radius: 5px solid lime;
+  border-color: coral; */
+
+  width: 50%;
+  height: 500px;
+  border: 2px solid rgb(231, 231, 243);
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background-color: white;
+}
+.shoppingBoxPara {
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.shoppingBoxTotals {
+  padding: 2px;
+  margin: 2px;
+  display: block;
+  width: 100%;
+  font-size: 25px;
+  text-align: center;
+  color: #00f;
+}
+.shoppingBoxButton {
+  background-color: black;
+  cursor: pointer;
+  font-size: 20px;
+  width: 100%;
+  color: white;
+  font-weight: 600;
+}
+.shoppingcartFlex {
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  display: flex;
+}
+.shoppingcartFlexImg {
+  border-radius: 50%;
+  width: 30%;
+  height: 110px;
+  right: 0;
+  margin-left: 0px;
+  object-fit: cover;
+}
+.shoppingcartFlexName {
+  font-size: 23px;
+  padding-left: 20%;
+  margin-left: 0px;
+  flex: 1;
+  right: 10;
+}
+.shoppingcartFlexPrice {
+  font-size: 25px;
+  color: #00f;
+  padding-left: 15%;
+  padding-right: 10px;
+  flex: 1;
+}
+.shoppingcartFlexCalc {
+  font-size: 23px;
+  padding-left: 20%;
+  margin-left: 0px;
+  flex: 1;
+  right: 10;
+}

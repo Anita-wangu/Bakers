@@ -1,0 +1,54 @@
+/* .editProductsFlex {
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  display: flex;
+  height: 50px;
+}
+.editProductsFlexName {
+  font-size: 23px;
+  padding-left: 20%;
+  margin-left: 0px; */
+/* flex: 1; */
+/* right: 10;
+}
+.editProductsFlexPrice {
+  font-size: 25px;
+  color: #00f;
+  padding-left: 20%; */
+/* flex: 1; */
+/* } */
+.rows {
+  /* padding: 8px; */
+  /* border: 1px solid #ddd; */
+  /* justify-content: space-between; */
+  /* display: flex; */
+  height: 40px;
+}
+.productsTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+.productsTable td .productsTable th {
+  /* border: 1px solid #ddd; */
+  padding: 8px;
+}
+.productsTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.productsTable tr:hover {
+  background-color: #ddd;
+}
+.productsTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #323b38;
+  color: white;
+}
+.editLinks {
+  text-decoration: none;
+  color: #000;
+}

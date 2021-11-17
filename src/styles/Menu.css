@@ -57,9 +57,16 @@
 }
 .productSelection {
   display: flex;
+  /* flex: 1; */
+}
+.cardLink {
+  display: flex;
+  text-decoration: none;
+  color: #000;
 }
 .cartIcon {
   flex: 1;
+  top: 0;
   padding-top: 38px;
   padding-left: 10px;
 }
@@ -69,10 +76,12 @@
 }
 
 .MenuSelectButton {
-  width: 75%;
+  width: 85%;
   height: 30px;
+  border-radius: 6px;
   background-color: black;
   color: white;
+  margin-top: 35px;
   font-size: 15px;
   margin-left: 20px;
 }
@@ -84,6 +93,7 @@
   height: 100%;
   display: flex;
   margin-top: 10px;
+  margin-bottom: 170px;
 }
 
 .productDesc {
@@ -147,16 +157,34 @@
   margin-top: 40px;
 }
 .addCartButton {
-  margin-top: 40px;
+  margin-top: 50px;
+  margin-bottom: 30px;
   width: 150px;
   height: 30px;
   border: none;
+  border-radius: 10px;
   background-color: #121619;
   color: whitesmoke;
   font-size: 17px;
   cursor: pointer;
   justify-content: center;
-  text-align: justify;
+}
+.caltime {
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-color: black;
+  border-radius: 10px solid black;
+  color: #000;
+}
+/* .calen {
+  border: none;
+  border-color: black;
+  border-radius: 10px solid black;
+  color: #000;
+} */
+.cal {
+  margin-top: 40px;
 }
 
 @media only screen and (max-width: 1300px) {

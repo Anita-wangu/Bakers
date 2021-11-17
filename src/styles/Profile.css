@@ -1,0 +1,247 @@
+.profileContainer {
+  border-radius: 5px;
+  /* background-color: #121619; */
+  width: 50%;
+  height: auto;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -moz-background-inline-policy: 0.4;
+  box-shadow: 0 8px 20px 0 rgba(3, 05, 7, 0.89);
+}
+.profileContainer .profileDetails {
+  height: 100%;
+  flex: 50%;
+  padding-right: 10px;
+  margin-top: 30px;
+}
+
+.profileContainer .prifilePicture {
+  height: 100%;
+  flex: 50%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 30px;
+}
+.prifilePicture {
+  margin-left: auto;
+  margin-right: auto;
+}
+.profileTitle {
+  justify-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 10;
+  font-size: 50px;
+}
+
+.profileInput input {
+  height: 100%;
+  width: 90%;
+  outline: none;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 30px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+.profileInput input:focus,
+.profileInput input:valid {
+  border-color: gray;
+}
+.profileInput {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  /* margin: 10px 0; */
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.profileImage {
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 0;
+  border: 3px solid #0082e6;
+  padding: 3px;
+  background-color: white;
+  overflow: hidden;
+  transition: all 1s;
+}
+.profileImageInput {
+  display: none;
+}
+.profileLabel {
+  box-sizing: border-box;
+  /* padding: auto; */
+  width: 180px;
+  height: 30px;
+  background-color: black;
+  color: white;
+  background-color: black;
+  padding-top: 5px;
+  border-radius: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.profileLabel:hover {
+  background-color: rgb(22, 24, 24);
+  transform: scale(1.1);
+}
+.profileButton {
+  box-sizing: border-box;
+  padding: auto;
+  width: 90%;
+  height: 32.5px;
+  color: white;
+  background-color: #000;
+  padding: 3px;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+.profileButton:hover {
+  background-color: rgb(22, 24, 24);
+  transform: scale(1.1);
+}
+/* 
+body {
+  background-color: #1c2833;
+}
+*:focus {
+  outline: none;
+}
+.box {
+  box-sizing: border-box;
+  width: 153px;
+  height: 153px;
+  border: 2px solid #3498db;
+  box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, 0.288);
+  border-radius: 50%;
+  background-color: black;
+  margin-top: 50px;
+  overflow: hidden;
+  transition: all 1s;
+}
+.box:hover {
+  width: 360px;
+  height: 600px;
+  border-radius: 5px;
+}
+img {
+  box-sizing: border-box;
+  width: 149px;
+  height: 149px;
+  border-radius: 50%;
+  margin: 0;
+  border: 5px solid #0082e6;
+  padding: 3px;
+  background-color: white;
+  overflow: hidden;
+  transition: all 1s;
+}
+.box:hover img {
+  width: 100px;
+  height: 100px;
+  margin: 20px 35%;
+}
+hr {
+  width: 500px;
+  line-height: 20px;
+  margin: 10px 10px 10px 10px;
+}
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  display: block;
+  box-sizing: border-box;
+  color: #3498db;
+  margin-bottom: 30px;
+  padding: 4px;
+  width: 220px;
+  height: 32px;
+  border: none;
+  border-bottom: 1px solid #0082e6;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  transition: 0.2s ease;
+  background: none;
+}
+input[type="text"] {
+  margin-top: 25px;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+  border-bottom: 2px solid #3498db;
+  border-bottom-right-radius: 20px;
+  color: #3498db;
+  transition: 0.2s ease;
+  background: black;
+  border-top: none;
+}
+
+button {
+  border: 1px solid #3498db;
+  background-color: black;
+  color: white;
+  height: 30px;
+  width: 100px;
+  border-radius: 5px;
+  left: 0;
+  margin: 0px;
+  transition: all 0.3s;
+}
+button:hover {
+  transform: scale(1.1);
+  background-color: #566573;
+}
+input[type="file"] {
+  display: none;
+}
+label {
+  box-sizing: border-box;
+  width: 40px;
+  height: 20px;
+  background-color: black;
+  color: white;
+  border: 1px solid #3498db;
+  background-color: black;
+  color: white;
+  padding: 4px;
+  border-radius: 2px;
+}
+label:hover {
+  background-color: #566573;
+  transform: scale(1.1);
+} */

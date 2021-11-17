@@ -1,0 +1,80 @@
+.containerSearchbar {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  height: 10%;
+  background-color: rgb(230, 215, 215);
+
+  padding-left: 10px;
+  padding-right: 15px;
+  font-family: "Segoe UI", "Segoe", Tahoma, Helvetica, Arial, sans-serif;
+}
+.search {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: "Segoe UI", "Segoe", Tahoma, Helvetica, Arial, sans-serif;
+}
+.searchTitle {
+  font-family: "Segoe UI", "Segoe", Tahoma, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.25em;
+  font-style: italic;
+}
+
+.searchbar {
+  float: right;
+  background-color: white;
+  color: black;
+  padding: 6px 10px;
+  width: 120px;
+  border: none;
+  margin-top: 1px;
+  margin-right: 8px;
+  font-family: "Segoe UI Light", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial,
+    sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  border-bottom: black solid 2.6px;
+  transition: 0.3s;
+}
+
+.searchbar::placeholder {
+  color: black;
+  font-family: "Segoe UI Light", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial,
+    sans-serif;
+  font-size: 1.25em;
+  font-weight: bold;
+  /* transition: 0.2s; */
+}
+
+.searchbar:focus {
+  width: 400px;
+  font-family: "Segoe UI Light", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial,
+    sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  transition: 0.3s;
+  /* Stops the input box from inheriting the styling from the inputs on the request form */
+  border-bottom: white solid 2px;
+  outline: none;
+}
+
+.btn-search {
+  cursor: pointer;
+  color: rgb(5, 5, 5);
+  text-decoration: none !important;
+  font-family: "Segoe UI Light", "Segoe UI", "Segoe", Tahoma, Helvetica, Arial,
+    sans-serif;
+  font-size: 1.5em;
+  padding-top: 5px;
+  margin-right: 40px;
+}
+.shopping a {
+  color: white;
+  text-decoration: none;
+}
