@@ -186,106 +186,107 @@ const EditForm = (props) => {
           </CardMedia>
           <form encType="multipart/form-data" onSubmit={uploadToServer}>
             <CardContent className={classes.root}>
-              <Grid container direction="column" spacing={1}></Grid>
-              <Grid item>
-                <Typography
-                  style={{
-                    fontWeight: "bold",
-                    fontSize: "25px",
-                    marginTop: "0px",
-                    paddingTop: "0px",
-                  }}
-                >
-                  {product.name}
-                </Typography>
-              </Grid>
-              {/* <grid item>
+              <Grid container direction="column" spacing={1}>
+                <Grid item>
+                  <Typography
+                    style={{
+                      fontWeight: "bold",
+                      fontSize: "25px",
+                      marginTop: "0px",
+                      paddingTop: "0px",
+                    }}
+                  >
+                    {product.name}
+                  </Typography>
+                </Grid>
+                {/* <grid item>
                   <img src={createObjectUrl} />
                   <TextField type="file" hidden />
                 </grid> */}
-              <Grid item>
-                <input
-                  className="formImageInput"
-                  type="file"
-                  alt="product image"
-                  onChange={uploadToClient}
-                  name="product-image"
-                  id="product-image"
-                />
-                <br />
                 <Grid item>
-                  <label className="editLabel">Title:</label>
-                  <br />
-                  <TextField
-                    id="title"
-                    // label="Product Title"
-                    variant="outlined"
-                    value={title}
-                    required
-                    size="small"
-                    defaultValue={product.title}
-                    onChange={(e) => setTitle(e.target.value)}
+                  <input
+                    className="formImageInput"
+                    type="file"
+                    alt="product image"
+                    onChange={uploadToClient}
+                    name="product-image"
+                    id="product-image"
                   />
-                </Grid>
-                <Grid item>
-                  <label className="editLabel">Name:</label>
                   <br />
-                  <TextField
-                    id="name"
-                    // label="name"
-                    variant="outlined"
-                    value={name}
-                    size="small"
-                    required
-                    defaultValue={product.name}
-                    onChange={(e) => setName(e.target.value)}
-                  />
-                </Grid>
-                <Grid item>
-                  <label className="editLabel">Description:</label>
-                  <br />
-                  <TextField
-                    id="description"
-                    // label="description"
-                    variant="outlined"
-                    value={description}
-                    size="small"
-                    required
-                    maxRows={3}
-                    defaultValue={product.description}
-                    onChange={(e) => setDescription(e.target.value)}
-                    multiline
-                  />
-                </Grid>
-
-                <Grid item>
-                  <label className="editLabel">Price:</label>
-                  <br />
-                  <TextField
-                    id="price"
-                    // label="price"
-                    variant="outlined"
-                    value={price}
-                    size="small"
-                    required
-                    defaultValue={product.price}
-                    onChange={(e) => setPrice(e.target.value)}
-                  />
-                </Grid>
-                <Grid item>
-                  <CardActions>
-                    <Button
-                      type="submit"
+                  <Grid item>
+                    <label className="editLabel">Title:</label>
+                    <br />
+                    <TextField
+                      id="title"
+                      // label="Product Title"
+                      variant="outlined"
+                      value={title}
+                      required
                       size="small"
-                      style={{
-                        paddingBottom: "10px",
-                        color: "black",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      Update
-                    </Button>
-                  </CardActions>
+                      defaultValue={product.title}
+                      onChange={(e) => setTitle(e.target.value)}
+                    />
+                  </Grid>
+                  <Grid item>
+                    <label className="editLabel">Name:</label>
+                    <br />
+                    <TextField
+                      id="name"
+                      // label="name"
+                      variant="outlined"
+                      value={name}
+                      size="small"
+                      required
+                      defaultValue={product.name}
+                      onChange={(e) => setName(e.target.value)}
+                    />
+                  </Grid>
+                  <Grid item>
+                    <label className="editLabel">Description:</label>
+                    <br />
+                    <TextField
+                      id="description"
+                      // label="description"
+                      variant="outlined"
+                      value={description}
+                      size="small"
+                      required
+                      maxRows={3}
+                      defaultValue={product.description}
+                      onChange={(e) => setDescription(e.target.value)}
+                      multiline
+                    />
+                  </Grid>
+
+                  <Grid item>
+                    <label className="editLabel">Price:</label>
+                    <br />
+                    <TextField
+                      id="price"
+                      // label="price"
+                      variant="outlined"
+                      value={price}
+                      size="small"
+                      required
+                      defaultValue={product.price}
+                      onChange={(e) => setPrice(e.target.value)}
+                    />
+                  </Grid>
+                  <Grid item>
+                    <CardActions>
+                      <Button
+                        type="submit"
+                        size="small"
+                        style={{
+                          paddingBottom: "10px",
+                          color: "black",
+                          fontWeight: "bold",
+                        }}
+                      >
+                        Update
+                      </Button>
+                    </CardActions>
+                  </Grid>
                 </Grid>
               </Grid>
             </CardContent>

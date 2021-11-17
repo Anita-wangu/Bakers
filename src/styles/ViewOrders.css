@@ -1,0 +1,30 @@
+.viewRows {
+  height: 40px;
+}
+.viewsTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+.viewsTable td .viewsTable th {
+  /* border: 1px solid #ddd; */
+  padding: 8px;
+}
+.viewsTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.viewsTable tr:hover {
+  background-color: #ddd;
+}
+.viewsTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #323b38;
+  color: white;
+}
+.editViewsLinks {
+  text-decoration: none;
+  color: #000;
+}

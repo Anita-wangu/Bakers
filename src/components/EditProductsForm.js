@@ -55,7 +55,7 @@ const AllProducts = ({ product }) => {
   const handleClose = (value) => {
     setOpen(false);
   };
-  return -(
+  return (
     <tr className="rows">
       <td>{product.name}</td>
       <td>{product.price}</td>

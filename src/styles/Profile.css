@@ -1,7 +1,7 @@
-.profileContainer {
+/* .profileContainer {
   border-radius: 5px;
   /* background-color: #121619; */
-  width: 50%;
+/* width: 50%;
   height: auto;
   display: flex;
   margin-left: auto;
@@ -24,7 +24,7 @@
 .profileContainer .prifilePicture {
   height: 100%;
   flex: 50%;
-  margin-top: 30px;
+  margin-top: 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -71,10 +71,31 @@
   height: 50px;
   width: 100%;
   /* margin: 10px 0; */
-  margin-bottom: 20px;
+/* margin-bottom: 20px;
   position: relative;
+} */
+.profileTitle {
+  justify-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 10;
+  font-size: 50px;
 }
-
+.profileContainer {
+  width: 50%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .profileImage {
   box-sizing: border-box;
   width: 200px;
@@ -90,10 +111,17 @@
 .profileImageInput {
   display: none;
 }
+TextField:placeholder {
+  color: #000;
+}
+.textfield :placeholder {
+  color: #000;
+}
 .profileLabel {
   box-sizing: border-box;
   /* padding: auto; */
-  width: 180px;
+
+  width: 200px;
   height: 30px;
   background-color: black;
   color: white;
@@ -102,8 +130,8 @@
   border-radius: 10px;
   padding-left: 50px;
   padding-right: 50px;
-  margin-bottom: 20px;
-  margin-top: 10px;
+  /* margin-bottom: 20px;
+  margin-top: 10px; */
   font-size: 16px;
   font-weight: 500;
 }
@@ -112,6 +140,31 @@
   transform: scale(1.1);
 }
 .profileButton {
+  box-sizing: border-box;
+  /* padding: auto; */
+
+  width: 200px;
+  height: 30px;
+  background-color: black;
+  color: white;
+  background-color: black;
+  padding-top: 5px;
+  border-radius: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  /* margin-bottom: 20px;
+  margin-top: 10px; */
+  font-size: 16px;
+  font-weight: 500;
+}
+.profileButton:hover {
+  background-color: rgb(22, 24, 24);
+  transform: scale(1.1);
+}
+/* placeholder {
+  color: #000;
+} */
+/* .profileButton {
   box-sizing: border-box;
   padding: auto;
   width: 90%;
@@ -128,11 +181,11 @@
   color: #fff;
   font-size: 16px;
   font-weight: 500;
-}
-.profileButton:hover {
+} */
+/* .profileButton:hover {
   background-color: rgb(22, 24, 24);
   transform: scale(1.1);
-}
+} */
 /* 
 body {
   background-color: #1c2833;
