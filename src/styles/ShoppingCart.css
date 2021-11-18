@@ -7,7 +7,7 @@
   border-radius: 5px solid lime;
   border-color: coral; */
 
-  width: 50%;
+  width: 80%;
   height: 500px;
   border: 2px solid rgb(231, 231, 243);
   margin: auto;
@@ -23,8 +23,8 @@
   display: flex;
 }
 .shoppingBoxTotals {
-  padding: 2px;
-  margin: 2px;
+  /* padding: 2px;
+  margin: 2px; */
   display: block;
   width: 100%;
   font-size: 25px;
@@ -55,7 +55,7 @@
 }
 .shoppingcartFlexName {
   font-size: 23px;
-  padding-left: 20%;
+  padding-left: 10%;
   margin-left: 0px;
   flex: 1;
   right: 10;
@@ -63,8 +63,8 @@
 .shoppingcartFlexPrice {
   font-size: 25px;
   color: #00f;
-  padding-left: 15%;
-  padding-right: 10px;
+  padding-left: 10%;
+  padding-right: 50px;
   flex: 1;
 }
 .shoppingcartFlexCalc {

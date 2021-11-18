@@ -339,7 +339,7 @@ const LoginForm = ({ submitForm }) => {
               <form onSubmit={login}>
                 <div className="input-boxes">
                   <div className="input-box">
-                    <i className="fas fa-envelope"></i>
+                    <i className="fas fa-user"></i>
 
                     <input
                       className="formInput"

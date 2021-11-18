@@ -29,6 +29,7 @@ function App() {
   const [MenuList, setMenuList] = useState("");
   const [items, setItems] = useState([]);
   const [user, setUser] = useState([]);
+  const [products, setProduct] = useState([]);
 
   const addToCart = (item) => {
     if (items.find((i) => i.id == item.id)) {
@@ -39,6 +40,12 @@ function App() {
     console.log("CONSOLE ITEMS");
     console.log(items);
   };
+  useEffect(() => {
+    axios
+      .get("http://localhost:2000/api/product")
+      .then((res) => setProduct(res.data))
+      .catch((err) => console.log(err));
+  }, []);
   useEffect(() => {
     axios
       .get("http://localhost:2000/api/order")
@@ -110,7 +117,7 @@ function App() {
           </Route>
           <Route path="/EditForm" exact component={EditForm} />
           <Route path="/ViewOrders" exact>
-            <ViewOrders OrderList={OrderList} />
+            <ViewOrders OrderList={OrderList} MenuList={MenuList} />
           </Route>
         </Switch>
         <Footer />

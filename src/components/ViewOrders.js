@@ -12,7 +12,7 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Slide from "@mui/material/Slide";
 
-const ViewOrders = ({ OrderList }) => {
+const ViewOrders = ({ OrderList, MenuList }) => {
   return (
     <>
       {OrderList.length && (
@@ -29,7 +29,7 @@ const ViewOrders = ({ OrderList }) => {
             </thead>
             <tbody>
               {OrderList.map((order) => (
-                <AllOrders order={order} />
+                <AllOrders order={order} products={MenuList} />
               ))}
             </tbody>
           </table>
@@ -45,7 +45,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-const AllOrders = ({ order }) => {
+const AllOrders = ({ order, products }) => {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -88,6 +88,7 @@ const AllOrders = ({ order }) => {
       console.log(e);
     }
   };
+  console.log(order.items);
   return (
     <tr className="viewRows">
       <td>{order.user.email}</td>
@@ -111,10 +112,29 @@ const AllOrders = ({ order }) => {
           onClose={handleClose}
           aria-describedby="alert-dialog-slide-description"
         >
-          <DialogTitle>{order.user.email}</DialogTitle>
+          <DialogTitle>
+            {order.user.name} <br /> {order.user.email}
+          </DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-slide-description">
-              {/* {order.items} */} order details
+              {order.items.length &&
+                order.items.map((item) => {
+                  const product = products.find((p) => (p._id = item.product));
+                  return (
+                    <div key={item._id}>
+                      <br />
+
+                      <p>Product id: {product._id}</p>
+                      <p>Product name: {product.name}</p>
+                      <p>Size in Kgs: {item.cakeSize}</p>
+                      <p>Cake type: {item.cakeType}</p>
+                      <p>Additional Description: {item.description}</p>
+                      <p>Peices: {item.numOfCakes}</p>
+                      <p>Created at: {new Date(item.createdAt).toString()}</p>
+                      <p>Pickup: {new Date(item.pickUp).toString()}</p>
+                    </div>
+                  );
+                })}
             </DialogContentText>
           </DialogContent>
           <DialogActions>
