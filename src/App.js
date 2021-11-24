@@ -19,16 +19,18 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-// import ClientNotification from "./pages/ClientNotification";
+import ClientNotification from "./pages/ClientNotification";
 import ViewOrders from "./components/ViewOrders";
 import EditProductsForm from "./components/EditProductsForm";
 import EditForm from "./pages/EditForm";
+import AllClients from "./pages/AllClients";
 
 function App() {
   const [OrderList, setOrderList] = useState([]);
   const [MenuList, setMenuList] = useState("");
   const [items, setItems] = useState([]);
   const [user, setUser] = useState([]);
+
   const [products, setProduct] = useState([]);
 
   const addToCart = (item) => {
@@ -106,29 +108,24 @@ function App() {
             <Profile user={user} />
           </Route>
           <Route path="/admin" exact component={Admin} />
+          <Route path="/AllClients" exact>
+            <AllClients user={user} />
+          </Route>
+          <Route path="/ViewOrders" exact>
+            <ViewOrders OrderList={OrderList} MenuList={MenuList} />
+          </Route>
           <Route path="/AddPostForm" exact component={AddPostForm} />
-          {/* <Route
-            path="/ClientNotification"
-            exact
-            component={ClientNotification}
-          /> */}
+
+          <Route path="/ClientNotification" exact>
+            <ClientNotification MenuList={MenuList} items={items} />
+          </Route>
           <Route path="/EditProductsForm" exact>
             <EditProductsForm items={items} MenuList={MenuList} />
           </Route>
           <Route path="/EditForm" exact component={EditForm} />
-          <Route path="/ViewOrders" exact>
-            <ViewOrders OrderList={OrderList} MenuList={MenuList} />
-          </Route>
         </Switch>
         <Footer />
       </Router>
-      {/* <Router>
-        <AdminNavbar />
-        <Switch>
-          <Route path="/" exact component={AdminHome} />
-        </Switch>
-        <Footer />
-      </Router> */}
     </div>
   );
 }

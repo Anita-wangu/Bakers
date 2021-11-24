@@ -35,8 +35,7 @@ const SingleProduct = ({ MenuList, addToCart, items }) => {
   };
   const { name } = useParams();
   console.log(MenuList);
-  const menudesc = MenuList.find((item) => item.name === name);
-  const menuitem = MenuList.find((item) => item.name === name);
+
   const [selectedOption, setSelectedOption] = useState(null);
   const handleChange = (e) => {
     setSelectedOption(e);
@@ -50,11 +49,14 @@ const SingleProduct = ({ MenuList, addToCart, items }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(null);
   const [numOfCakes, setNumOfCakes] = useState(1);
   const [desc, setDesc] = useState("");
+  const menudesc = MenuList.find((item) => item.name === name);
+  const menuitem = MenuList.find((item) => item.name === name);
 
   const [redirect, setRedirect] = useState("");
 
   useEffect(() => {
     const user = getCurrentUser();
+
     if (user) {
       setIsLoggedIn(true);
     } else {

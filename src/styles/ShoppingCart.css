@@ -8,7 +8,8 @@
   border-color: coral; */
 
   width: 80%;
-  height: 500px;
+  max-height: max-content;
+  overflow-y: scroll;
   border: 2px solid rgb(231, 231, 243);
   margin: auto;
   margin-top: 20px;
@@ -39,6 +40,19 @@
   color: white;
   font-weight: 600;
 }
+.shoppingBoxOrderButton {
+  background-color: black;
+  cursor: pointer;
+  font-size: 20px;
+  width: 100%;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+.shoppingBoxOrderButton Link {
+  text-decoration: none;
+  color: white;
+}
 .shoppingcartFlex {
   justify-content: space-between;
   align-items: center;
@@ -46,8 +60,8 @@
   display: flex;
 }
 .shoppingcartFlexImg {
-  border-radius: 50%;
-  width: 30%;
+  border-radius: 100%;
+  width: 110px;
   height: 110px;
   right: 0;
   margin-left: 0px;

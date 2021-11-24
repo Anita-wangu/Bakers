@@ -56,18 +56,6 @@ const AllOrders = ({ order, products }) => {
     setOpen(false);
   };
 
-  // const [anchorEl, setAnchorEl] = React.useState(null);
-
-  // const handleClick = (event) => {
-  //   setAnchorEl(event.currentTarget);
-  // };
-
-  // const handleClose = () => {
-  //   setAnchorEl(null);
-  // };
-
-  // const open = Boolean(anchorEl);
-  // const id = open ? "simple-popover" : undefined;
   const completeOrder = (id) => {
     try {
       axios.put(`http://localhost:2000/api/order/${id}`, {
@@ -123,7 +111,6 @@ const AllOrders = ({ order, products }) => {
                   return (
                     <div key={item._id}>
                       <br />
-
                       <p>Product id: {product._id}</p>
                       <p>Product name: {product.name}</p>
                       <p>Size in Kgs: {item.cakeSize}</p>
